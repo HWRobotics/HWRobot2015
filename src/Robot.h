@@ -10,12 +10,16 @@
 
 #include "WPILib.h"
 #include "Commands/Command.h"
+#include "Commands/Autonomous.h"
+#include "Subsystems/PIDTest.h"
+#include "RobotMap.h"
 
 #include "OI.h"
 
 class Robot: public IterativeRobot {
 public:
 	static OI* oi;
+	static PIDTest* pidSubsystem;
 
 private:
 	Command *autonomousCommand;

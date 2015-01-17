@@ -7,4 +7,5 @@ Autonomous::Autonomous() : CommandGroup("Autonomous") {
 	//AddSequential(new PrepareToPickup());
     //AddParallel(new SetWristSetpoint(-45));
     //AddSequential(new CloseClaw());
+	AddSequential(new MovePIDMotor(0));
 }

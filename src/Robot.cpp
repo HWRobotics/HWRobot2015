@@ -11,12 +11,14 @@ void Robot::RobotInit() {
 	std::cout << "FRC Team 1148 robot code startup" << std::endl;
 	//Init all the components
 	//drivetrain = new DriveTrain();
+	pidSubsystem = new PIDTest(PID_TEST_MOTOR);
 
 	oi = new OI();
 
 	autonomousCommand = new Autonomous();
 	lw = LiveWindow::GetInstance();
 
+	SmartDashboard::PutData(pidSubsystem);
     // Show what command your subsystem is running on the SmartDashboard
     //SmartDashboard::PutData(drivetrain);
 }
